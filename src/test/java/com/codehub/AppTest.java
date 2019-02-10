@@ -69,4 +69,25 @@ public class AppTest
 	public void divide_two(){
 		assertEquals(2, 4 >> 1); // 4/2
 	}
+
+	@Test
+	public void divide_two_rounded_down(){
+    	assertEquals(3, 7 >> 1);
+	}
+
+
+	@Test
+	public void divide_four_rounded_down(){
+		assertEquals(1, 7 >> 2);
+	}
+
+
+	@Test
+	public void force_even(){
+    	assertEquals(2, 3 & ~1);
+		assertEquals(6 , 7 & ~1);
+
+		assertEquals(4, 4 & ~1);
+	}
+
 }
